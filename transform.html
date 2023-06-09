@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Transform - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Transform</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    A Game Object’s transform encapsulates the positional attributes of its parent object. 
+                </p>
+                <h3>Variable Hierarchy</h3>
+                <ul>
+                    <li>Blue = class</li>
+                    <li>Green = attributes</li>
+                </ul>
+                <img src="images/transformHierarchy.png">
+                <h3>Z-Index</h3>
+                <p>Since Arkito is a 2D game engine, multi-layer renderings must be sorted. An object with a higher z-index will be rendered on top of an object with a lower z-index. When the scene is updating its game objects, it will sort the order of its iterator from smallest z-index to largest z-index.</p>
+                <h3>List of Methods</h3>
+                <ul>
+                    <li>worldPosition()</li>
+                    <li>getScreenPosition()</li>
+                    <li>getScreenCenterPosition()</li>
+                    <li>setWorldPosition(Vector2f)</li>
+                    <li>setWorldPosition(float, float)</li>
+                    <li>setWorldPosition(Vector3i)</li>
+                    <li>setzIndex(int)</li>
+                    <li>getzIndex()</li>
+                    <li>move(Vector2f)</li>
+                </ul>
+                <h3>Transform Positions</h3>
+                <p>A game object’s position is associated with the top left corner of its bounds. For example, when rendering an image texture, the left edge of the image will be the transform’s x-coordinate.</p>
+                <h3>Get Screen Center Position</h3>
+                <p>
+                    The center position of a transform refers to the center of its bounds.
+                    <br>
+                    Formula:
+                    <i>position.x + (scale.x / 2); position.y + (scale.y / 2)</i>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

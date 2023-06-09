@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prefabs - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Prefabs</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        Prefabricated game objects allow you to create a blueprint for instantiating your game objects without actually instantiating it. Thus, you can create game objects with one simple line of code. The static prefabs class has two static methods for generating game objects. Their parameters pass in attributes for the game object including its name, position, size, rotation, and components. However, it’s not recommended that you generate game objects through the prefabs class directly. Instead, create your own static prefabs class in order to create your own blueprint for an object.
+                    </p>
+                    <h3>Creating Prefabs</h3>
+                    <p>Example 1:</p>
+                    <img src="images/samplePrefab1.png">
+                    <p>Example 2:</p>
+                    <img src="images/samplePrefab2.png">
+                    <h3>Instantiating Prefabs</h3>
+                    <p>Example 1 (in the scene class):
+                        <br>
+                        <i>addGameObject(SamplePrefab1.generate());</i>
+                    </p>
+                    <p>
+                        Example 2 (in the scene class):
+                        <br>
+                        <i>addGameObject(SamplePrefab2.generate());</i>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

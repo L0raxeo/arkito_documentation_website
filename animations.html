@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animations - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Animations</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    The animation object is an easy way to implement animation into your project. It’s a general object utility which means it can be applied to anything (Gui textures, component rendering… etc). When an animation object is instantiated, the frame interval (i.e. the speed of the animation) and the individual frames are passed through the parameters. If you want to update the animation, its update method needs to be invoked—usually through a component’s update method or through the scene’s update method. Rendering the animation is as simple as rendering the current frame’s buffered image through the graphics component in your render method (the current frame can be accessed via its getter method).
+                </p>
+                <h3>Frame Intervals</h3>
+                <p>As the frame interval value increases so does the time between each frame. A lower frame interval means faster animation.</p>
+                <h3>Methods</h3>
+                <ul>
+                    <li>update()</li>
+                    <li>getIndex()</li>
+                    <li>getCurrentFrame()</li>
+                </ul>
+                <h3>Update</h3>
+                <p>To animate the animation, invoke your animation object’s update method via an update method linked to the game thread (e.g. a scene’s update method or a component’s update method).</p>
+                <h3>Get Current Frame</h3>
+                <p>In order to render the animation, render the buffered image returned by the getCurrentFrame() method.</p>
+                <h3>Get Index</h3>
+                <p>Returns the index associated with the current frame of the animation.</p>
+            </div>
+        </div>
+    </body>
+</html>

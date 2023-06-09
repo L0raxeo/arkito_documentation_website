@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rigidbody, Physics & Collision - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Rigidbody, Physics & Collision</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    This page is a guide for creating a game object that can collide and move under the laws of physics.
+                </p>
+                <h3>Example:</h3>
+                <p>
+                    Notice lines 29-31 where the rigidbody, physics, and box-bounds components are added to an example prefab. The Rigidbody component has to be added before the Physics component so that the Physics component can get the Rigidbody component when its start method is called.
+                </p>
+                <img src="images/samplePrefab1.png">
+            </div>
+        </div>
+    </body>
+</html>

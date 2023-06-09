@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multi-Scene Management - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Multi-Scene Management</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    All scene management is performed in the static SceneManager class. Changing scenes can be done whenever and wherever in your program.
+                </p>
+                <h3>Method Descriptions</h3>
+                <p>
+                    &lt;T extends Scene&gt; getScene(Class&lt;T&gt;)
+                    <ul>
+                        <li>
+                            Returns scene object
+                                <ul>
+                                    <li>Returns null if an instance does not exist in instantiatedScenes list</li>
+                                </ul>
+                        </li>
+                        <li>Parameter receives the scene class who's instance is being returned</li>
+                    </ul>
+                </p>
+                <p>
+                    changeScene(Class&gt;?&lt;)
+                    <ul>
+                        <li>Void method</li>
+                        <li>If an instance of the scene class exists in instantiatedScenes list, it will mark that scene instance as the active scene</li>
+                        <li>If there is no instance of the scene class in the instantiatedScenes list, it will create an instance and market that instance as the active scene</li>
+                    </ul>
+                </p>
+                <p>
+                    getActiveScene()
+                    <ul><li>Returns the active scene (i.e. scene being updated and rendered)</li></ul>
+                </p>
+                <h3>Scene Manager Hierarchy</h3>
+                <ul>
+                    <li>Red = functions</li>
+                    <li>Yellow = conditions</li>
+                    <li>Green = attributes</li>
+                    <li>Blue = class</li>
+                </ul>
+                <img src="images/sceneManagerHierarchy.png">
+            </div>
+        </div>
+    </body>
+</html>

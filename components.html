@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Components - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Components</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        A component is stored in a list of components inherited from its respective game object. The abstract component class provides a blueprint for your own custom components. None of its methods are abstract, so it isn’t necessary to override/implement any of them (this was done to reduce coupling). However, it was made an abstract class in order to prevent users from directly creating a component object that has no functionality. Component start, update, render, collision, and on-destroy methods are automatically invoked/handled by its parent game object. It is up to you to populate these methods with tasks.
+                    </p>
+                    <h3>UID System</h3>
+                    <p>Each component is identified with a unique identifier associated with the number of components created at the time of its instantiation.</p>
+                    <h3>Inherited Methods</h3>
+                    <ul>
+                        <li>start()</li>
+                        <li>update(double)</li>
+                        <li>render(Graphics)</li>
+                        <li>uid()</li>
+                        <li>onCollision(Collision)</li>
+                        <li>onDestroy()</li>
+                    </ul>
+                    <h3>Example Component</h3>
+                    <img src="images/sampleComponent.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

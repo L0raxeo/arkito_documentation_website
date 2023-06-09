@@ -1,0 +1,41 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.documentationWrapper {
+    font-family: "calibri", sans-serif;
+    padding: 50px;
+    padding-left: 250px;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "calibri", sans-serif;
+}
+
+.docsNavBar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #333;
+    height: 100%;
+}
+
+.docsNavBar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.docsNavBar ul li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+.docsNavBar ul li a:hover {
+    background-color: #111;
+}

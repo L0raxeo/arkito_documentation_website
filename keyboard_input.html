@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Input - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Keyboard Input</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        Arkito's Key Manager class statically handles all keyboard inputs for you. This way, your game can access the Keyboard Manager methods wherever and whenever you want. A key has three different states: idle, pressed, held, and released. If you are unfamiliar with the AWT KeyEvent library, please refer to Oracle’s <a href="https://docs.oracle.com/javase/8/docs/api/java/awt/event/KeyEvent.html">documentation</a>.
+                    </p>
+                    <h3>Press State</h3>
+                    <p>Check if a key has been pressed with the onPress(KeyEvent) method or with the onPress(char) method. It’s recommended that KeyEvent.keyCode is used. Returns a boolean.</p>
+                    <h3>Held State</h3>
+                    <p>Check if a key is being held with the isHeld(KeyEvent) method or with the isHeld(char) method. It’s recommended that KeyEvent.keyCode is used. Returns a boolean.</p>
+                    <h3>Release State</h3>
+                    <p>Check if a key has been released with the onRelease(KeyEvent) method or with the onRelease(char) method. It’s recommended that KeyEvent.keycode is used. Returns a boolean.</p>
+                    <h3>Idle State</h3>
+                    <p>If the key is neither pressed, held, nor released, all aforementioned methods will return a boolean of false.</p>
+                    <h3>Has Input</h3>
+                    <p>Returns true if any key is being held, pressed, or released. Returns false otherwise.</p>
+                    <h3>Has Pressed Input</h3>
+                    <p>
+                        Returns true if any key is being pressed. Returns false otherwise.
+                    </p>
+                    <p>
+                        Generic Example (if statement is true if the space bar has been pressed on keyboard):
+                        <img src="images/keyboardInputExample.png" alt="keyboard input">
+                    </p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

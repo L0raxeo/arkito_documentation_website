@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Asset Loaders - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Asset Loaders</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        Asset Loaders are custom classes that implement the Asset Loader interface. The interface implements the loadAssets(minDurationMillis) and unloadAssets() methods. Asset Loaders are often used in conjunction with the Loading Screen class in order to hide lag. Asset Loaders solely load and unload assets from the Asset Pool. They are useful for staging your game. Instead of loading in your assets during the game, Asset Loaders condense that work into one stage in order to prevent future lag.
+                    </p>
+                </div>
+                <div class="assetLoaderWoLoadingScreen">
+                    <h3>Asset Loader w/o Loading Screen</h3>
+                    <p>Example:</p>
+                    <img src="images/sampleAssetLoader.png" alt="sample asset loader">
+                </div>
+                <div class="assetLoaderWLoadingScreen">
+                    <p>Example:</p>
+                    <img src="images/sampleAssetLoaderWLoadingScreen.png" alt="sample asset loader with loading screen">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

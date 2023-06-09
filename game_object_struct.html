@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Keyboard Input - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Mouse Button Input</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    Game Objects are containers for a collection of components and for positional attributes. Update, render, start, and die methods are all handled by the scene along with all of its inherited components.
+                </p>
+                <h3>UID System</h3>
+                <p>Each game object is identified with a unique identifier associated with the number of game objects created at the time of its instantiation. It contains a string name, however, it should be considered to be an unsafe identifier since multiple game objects can have the same name.</p>
+                <h3>Structure Hierarchy</h3>
+                <ul>
+                    <li>Blue = class</li>
+                    <li>Green = attributes</li>
+                </ul>
+                <img src="images/gameObjectHierarchy.png">
+                <h3>Constructor</h3>
+                <p>
+                    <i>GameObject(String, Transform)</i>
+                    <ul>
+                        <li>String name</li>
+                        <li>Transform transform</li>
+                    </ul>
+                </p>
+                <h3>Methods</h3>
+                <ul>
+                    <li>getComponents(Class&lt;T extends Component&gt;)</li>
+                    <li>getComponent(int)</li>
+                    <li>hasComponent(Class&lt;T extends Component&gt;)</li>
+                    <li>removeComponent(Class&lt;T extends Component&gt;)</li>
+                    <li>addComponent(Component)</li>
+                    <li>getName()</li>
+                    <li>getUid()</li>
+                    <li>getAllComponents()</li>
+                    <li>isDead()</li>
+                    <li>die()</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

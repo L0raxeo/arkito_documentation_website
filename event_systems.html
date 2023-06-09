@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Event System - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Event System</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        The event system consists of two parts: the event handler and the event triggers. Event triggers are instantiable classes that allow you to blindly trigger methods across your program, therefore allowing you to implement better staging within your program. The event handler is a static class that allows you to access these event triggers wherever and whenever in your program.
+                    </p>
+                    <h3>Event Handler</h3>
+                    <p>
+                        Get Event trigger
+                        <p style="margin-left: 25px;">The static getEventTrigger(String) method takes in the reference name of the event trigger you want to use.</p>
+                    </p>
+                    <p>
+                        Add Event trigger
+                        <p style="margin-left: 25px;">The static addEventTrigger(String, EventTrigger) method takes in the reference name of the event trigger and the event trigger object itself. However, this method is not meant to be used since event triggers automatically add themselves to the event handler on instantiation in their constructor.</p>
+                    </p>
+                    <h3>Event Triggers</h3>
+                    <p>
+                        Trigger Event
+                        <p style="margin-left: 25px;">The triggerEvent(Object…) method takes in the parameters of the methods being triggered. Upon invocation, the method will trigger every method associated with the event trigger object and pass the appropriate information through its parameters.</p>
+                    </p>
+                    <p>
+                        Subscribing
+                        <p style="margin-left: 25px;">The subscribe(Object, String, Class&lt;?&gt;...) method takes in the object subscribing to the event trigger, the method name being subscribed and that will be invoked when the event is triggered, and the parameters of the method subscribing to the event.</p>
+                    </p>
+                    <h3>Example:</h3>
+                    <img src="images/eventTriggerExample.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

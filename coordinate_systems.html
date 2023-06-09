@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coordinate Systems - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Coordinate Systems</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    Arkito has different coordinate systems. For games, the world coordinate system is used because it adheres to the standard mathematical graph system while also accounting for the game camera’s position. Typically for mathematical calculations and GUI layouts, the graph coordinate system is used. Typically for mouse positions, post-render graphics, and GUI layouts the screen coordinate system is used.
+                </p>
+                <h3>Direction</h3>
+                <p>
+                    Graph
+                    <ul>
+                        <li>x-coordinates increase towards the right of the application window</li>
+                        <li>y-coordinates increase towards the top of the application window</li>
+                    </ul>
+                    Screen
+                    <ul>
+                        <li>x-coordinates increase towards the right of the application window</li>
+                        <li>y-coordinates increase towards the bottom of the application window</li>
+                    </ul>
+                    World
+                    <ul>
+                        <li>x-coordinates increase towards the right of the application window, however, they are displaced according to the camera x-offset</li>
+                        <li>y-coordinates increase towards the top of the application window, however, they are displaced according to the camera’s y-offset</li>
+                    </ul>
+                </p>
+                <h3>Screen Position</h3>
+                <p>Adds the Camera’s offset values to the raw screen position (Window_Height - worldPos.y)</p>
+                <p>
+                    Code Formula:
+                    <br>
+                    <i>x = noCamScreenPosition..x + Camera.xOffset(); y = position.y + Camera.yOffset()</i>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>

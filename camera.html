@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Camera - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Camera</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    The Camera is a static class that encapsulates the position offsets for world object rendering positions. When an object is rendered on the screen, it gets the screen position from the object’s <a href="transform.html">transform</a> component. 
+                </p>
+                <h3>Functions Overview</h3>
+                <ul>
+                    <li>resetPosition()</li>
+                    <li>setWorldPosition(Vector2i)</li>
+                    <li>setWorldPosition()</li>
+                    <li>getDegFromOriginToTarget(int, int, int, int)</li>
+                    <li>screenToWorld(Vector2i)</li>
+                    <li>worldToScreen(Vector2i)</li>
+                    <li>moveWorldCoords(Vector2i)</li>
+                    <li>moveWorldCoords(int, int)</li>
+                    <li>xOffset()</li>
+                    <li>yOffset()</li>
+                </ul>
+                <h3>Reset Position</h3>
+                <p>The reset position function sets the xOffset and yOffset to zero.</p>
+                <h3>Set World Position</h3>
+                <p>The set world position function sets the xOffset to -worldPosition.x and yOffset to worldPosition.y as passed through the parameters.</p>
+                <h3>Get World Position</h3>
+                <p>Returns a vector with an x-value of -xOffset and yOffset.</p>
+                <h3>Get Degree from Origin to Target</h3>
+                <p>Returns the angle at which an object should be rotated in order to face the specified target position. Both screen positions are passed through the parameters. While this method is more of a mathematical utility function, it makes it easy and is often applicable to rotating player game objects towards a specific point (especially in top-down/bird’s-eye/helicopter view games).</p>
+                <h3>Screen to World</h3>
+                <p>Translates and returns the parameter’s screen position to world coordinates by subtracting the window height from the y-coordinate of the specified screen position.</p>
+                <h3>World to Screen</h3>
+                <p>Translates and returns the parameter’s screen position to world coordinates by subtracting the window height from the y-coordinate of the specified world position.</p>
+                <h3>Move World Coordinates</h3>
+                <p>Moves the Camera according to the velocities specified in the parameters. The vector passed through the parameters should be in world coordinates.</p>
+                <h3>Offset Functions</h3>
+                <p>Both functions return their respective offset values for their respective axes.</p>
+            </div>
+        </div>
+    </body>
+</html>

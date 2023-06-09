@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Mouse Motion - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Mouse Motion</b></h1>
+            <hr>
+            <div class="content-box">
+                <h3>Overview</h3>
+                <p>
+                    Adding collisions to your game object is as simple as adding the box-bounds component.
+                </p>
+                <h3>Simulating Collisions</h3>
+                <p>The box-bounds component will look at the rigidbody’s planned path and determine whether it will collide with any objects. If it does, it will send back any collisions it detects to the rigidbody to be managed.</p>
+                <h3>On Collision</h3>
+                <p>The game object will invoke the onCollision method within all of its components if a box-bounds component is attached to it with a rigidbody. It passes through the parameters a collision object that encapsulates holds the game object being collided with, the game object colliding, and the collision type.</p>
+                <h3>Collision Types</h3>
+                <ul>
+                    <li>TOP</li>
+                    <li>BOTTOM</li>
+                    <li>LEFT</li>
+                    <li>RIGHT</li>
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>

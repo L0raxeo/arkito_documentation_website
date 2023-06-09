@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Getting Started - Arkito Documentation</title>
+        <link rel="stylesheet" href="css/documentationStyle.css">
+    </head>
+    <body>
+        <div class="docsNavBar">
+            <ul>
+                <li><a href="getting_started.html">Getting Started</a></li>
+                <li><a href="asset_loaders.html">Asset Loaders</a></li>
+                <li><a href="loading_screens.html">Loading Screens</a></li>
+                <li><a href="keyboard_input.html">Keyboard Input</a></li>
+                <li><a href="mouse_button_input.html">Mouse Button Input</a></li>
+                <li><a href="mouse_motion.html">Mouse Motion</a></li>
+                <li><a href="coordinate_systems.html">Coordinate Systems</a></li>
+                <li><a href="multi_scene_management.html">Multi-Scene Management</a></li>
+                <li><a href="camera.html">Camera</a></li>
+                <li><a href="animations.html">Animations</a></li>
+                <li><a href="transform.html">Transform</a></li>
+                <li><a href="game_object_struct.html">Game Object Structure</a></li>
+                <li><a href="prefabs.html">Prefabs</a></li>
+                <li><a href="components.html">Components</a></li>
+                <li><a href="event_systems.html">Event Systems</a></li>
+                <li><a href="physics.html">Physics</a></li>
+                <li><a href="rigidbody.html">Rigidbody</a></li>
+                <li><a href="collision_and_box_bounds.html">Collision and Box Bounds</a></li>
+                <li><a href="rigidbody_physics_and_collision.html">Rigidbody, Physics, and Collision</a></li>
+            </ul>
+        </div>
+        <div class="documentationWrapper">
+            <h1><b>Getting Started</b></h1>
+            <hr>
+            <div class="content-box">
+                <div class="overview">
+                    <h3>Overview</h3>
+                    <p>
+                        Since Arkito is an open source game engine, the setup is a relatively simple process of downloading the repository and working directly in the project. When creating your game, do not rename or move the /arkiGame/ package. Only packages with the prefix “sample” can be moved, deleted, and modified safely. The /arkiGame/scenes/ package cannot be renamed or removed, however, its contents can be modified.
+                    </p>
+                    <h3>Steps Summary</h3>
+                    <ul>
+                        <li>Download the repository</li>
+                        <li>Setup the app configuration</li>
+                        <li>Create your default scene</li>
+                    </ul>
+                </div>
+                <div class="downloadingRepo">
+                        <h3>Downloading the repository</h3>
+                        <p>Refer to a tutorial on the basics of GitHub if this step is difficult.</p>
+                        <ol type="1">
+                            <li>Go to the <a href="https://github.com/L0raxeo/Arkito.git" target="_blank">Arkito GitHub Repository</a> by L0raxeo</li>
+                            <li>Download the repository either directly or from a fork</li>
+                            <li>Open the project in IntelliJ</li>
+                        </ol>
+                </div>
+                <div class="settingUpAppConfig">
+                        <h3>Setting up the App Configuration</h3>
+                        <p>the Arkito game engine will automatically scan the main /arkiGame/ package and create a list of all the classes. Then, it will find the class with the @AppConfig annotation in the list.</p>
+                        <ol type="1">
+                            <li>
+                                Create a class to store the App Configuration
+                                <ol type="a">
+                                    <li>The class name does not matter</li>
+                                    <li>The class must be in the /arkiGame/ package</li>
+                                </ol>
+                            </li>
+                            <li>
+                                Add the App Configuration annotation
+                                <ol type="a">
+                                    <li>Specify windowTitle - title of your application window</li>
+                                    <li>Specify windowWidth - width of your application window</li>
+                                    <li>Specify windowHeight - height of your application window</li>
+                                    <li>Specify resizeable - determines whether your application window can be resized</li>
+                                </ol>
+                            </li>
+                        </ol>
+                        <p>Example:</p>
+                        <img src="images/appConfigExample.png" alt="sample app configuration">
+                </div>
+                <div class="creatingDefaultScene">
+                    <h3>Creating your default scene</h3>
+                    <p>The /arkiGame/scenes/package <i>cannot</i> be renamed or removed safely. However, any classes within the package <i>can</i> be safely modified, moved, or destroyed.</p>
+                    <ol type="1">
+                        <li>
+                            Creating your scene class within the /arkiGame/scenes/ package
+                            <ul><li>Naming does <i>not</i> matter</li></ul>
+                        </li>
+                        <li>Extend your scene to the abstract scene class</li>
+                    </ol>
+                    <p>Example:</p>
+                    <img src="images/exampleDefaultScene.png">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
