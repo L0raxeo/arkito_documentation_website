@@ -39,3 +39,12 @@ body {
 .docsNavBar ul li a:hover {
     background-color: #111;
 }
+
+.docsNavBar {
+    width: 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* or some other limit */
+    overflow-y: auto;
+}
